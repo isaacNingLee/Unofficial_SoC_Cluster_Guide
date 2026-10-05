@@ -21,6 +21,9 @@ Always follow the official documentation when it differs from this guide:
 
 Found an error or something useful to add? Students and staff are warmly encouraged to share improvements by opening a pull request.
 
+> [!IMPORTANT]
+> **Connect via a plain terminal SSH client only.** Do not use VSCode's Remote-SSH extension (or similar IDE-integrated SSH tools) to connect to the cluster — this is not allowed.
+
 ## Prerequisites
 
 Before continuing, complete the official [cluster access steps](https://dochub.comp.nus.edu.sg/cf/guides/compute-cluster/access).
