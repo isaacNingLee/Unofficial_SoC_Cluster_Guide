@@ -18,8 +18,8 @@
 # Stop the job after five mins if it has not finished.
 #SBATCH --time=00:05:00
 
-# Request one NVIDIA A100 GPU with 40 GB of memory.
-#SBATCH --gpus=a100-40:1
+# Request one NVIDIA H100 GPU with 47 GB of memory.
+#SBATCH --gpus=h100-47:1
 
 # Reserve eight CPU cores for the task.
 #SBATCH --cpus-per-task=8
