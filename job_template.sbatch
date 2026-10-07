@@ -15,8 +15,8 @@
 # Queue in which this job should run.
 #SBATCH --partition=gpu-long
 
-# Stop the job after six hours if it has not finished.
-#SBATCH --time=06:00:00
+# Stop the job after five mins if it has not finished.
+#SBATCH --time=00:05:00
 
 # Request one NVIDIA A100 GPU with 40 GB of memory.
 #SBATCH --gpus=a100-40:1
