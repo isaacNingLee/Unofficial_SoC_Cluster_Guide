@@ -54,6 +54,25 @@ First complete the [StuJump setup](https://dochub.comp.nus.edu.sg/cf/guides/sjum
 ssh -J <soc_username>@stujump.comp.nus.edu.sg <soc_username>@xlogin.comp.nus.edu.sg
 ```
 
+### If you were given a dedicated GPU node instead
+
+> [!NOTE]
+> This applies only if you were given direct access to a specific named GPU machine (for example `cgpa6`, `cgpa9`, or `cgpa10`) rather than to the shared Slurm-managed compute cluster the rest of this guide describes.
+
+Connect to that machine by hostname instead of `xlogin`:
+
+```bash
+# From an SoC building.
+ssh <soc_username>@<node_name>.comp.nus.edu.sg
+
+# From outside SoC, via StuJump.
+ssh -J <soc_username>@stujump.comp.nus.edu.sg <soc_username>@<node_name>.comp.nus.edu.sg
+```
+
+These machines are standalone GPU servers, not part of the Slurm cluster. There is no job queue, so `salloc`, `srun`, `sbatch`, and `squeue` do not apply — install Conda and run your scripts directly on the node instead of following the "Submit a batch job" section below. The rest of this guide's cluster-specific steps (storage paths, job priority, batch submission) do not apply to these nodes either.
+
+Policies for dedicated nodes, including whether IDE-integrated SSH tools are permitted, may differ from the shared cluster's. Confirm with whoever granted you access if unsure.
+
 ## 2. Start an interactive compute session
 
 After connecting, you are on the `xlogin` login node. Use it only to prepare and submit work—not for installations, training, inference, or other compute-heavy tasks.
